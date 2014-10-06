@@ -62,7 +62,7 @@ public class sJobsListener implements PluginListener, CommandListener{
 	toolTip = "/job <join|leave|help|reload> [job]")
 	
 	public void job(MessageReceiver caller, String [] parameters){
-		caller.notice("Usage: /job <join|leave|help|reload> [job] (Job wanting to join)");
+		caller.notice("Usage: /job <join|leave|help|version> [job] (Job wanting to join)");
 	}
 	
 	@Command
@@ -75,6 +75,35 @@ public class sJobsListener implements PluginListener, CommandListener{
 	public void join(MessageReceiver caller, String [] parameters){
 		if(parameters.length == 1){
 			caller.notice("Usage: /job join [job] (Job wanting to join)");
+			return;
+		}
+	}
+	
+	@Command
+	(aliases = { "leave" },
+	description = "Leave a job!",
+	permissions = { "sjobs.command.job" },
+	toolTip = "/leave [job]",
+	parent = "job")
+	
+	public void leave(MessageReceiver caller, String [] parameters){
+		if(parameters.length == 1){
+			caller.notice("Usage: /job leave [job] (Job wanting to leave)");
+			return;
+		}
+	}
+	
+	@Command
+	(aliases = { "version" },
+	description = "Check the version!",
+	permissions = { "sjobs.command.job" },
+	toolTip = "/version",
+	parent = "job")
+	
+	public void version(MessageReceiver caller, String [] parameters){
+		if(parameters.length == 1){
+			caller.notice("Welcome to sJobs 0.0.1 Alpha!");
+			caller.notice("This is not implemented yet. Please wait.");
 			return;
 		}
 	}
