@@ -1,29 +1,18 @@
-# sJobs Readme #
+### sJobs Readme ###
 
-This README would normally document whatever steps are necessary to get your application up and running.
+sJobs is the new job plugin for canary. Using this, you'll be able to gain money and experience points from mining, digging, and or cutting wood. It all depends on the job you select. 
 
-### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+### Planned Jobs (0.0.2 Alpha) ###
 
-### How do I get set up? ###
+* Miner
+* Woodcutter
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+### Planned Features ###
 
-### Contribution guidelines ###
+* Stored information in properties file for quick editing
+* Drop Chances
+* Abilities
+* Leveling System
 
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+### If you have any problems or suggestions, please tell me. ###
