@@ -21,6 +21,9 @@ public class sJobsListener implements PluginListener, CommandListener{
 	File user = new File("config/sJobs/users/");
 	PropertiesFile users;
 
+// Should also have something that points to Job job.
+
+
 	@HookHandler
 	public void onLogin(ConnectionHook hook){
 		Player player = hook.getPlayer();
@@ -33,17 +36,17 @@ public class sJobsListener implements PluginListener, CommandListener{
 			PropertiesFile users = new PropertiesFile("config/sJobs/users/" + player.getName() + ".properties");
 			
 			if(!users.containsKey("Job")){
-				users.setString("Job", "Jobless");
+				users.getString("Job", "Jobless");
 			}
 			
 			if(!users.containsKey("Level"))
-				users.setString("Level", "1");
+				users.getString("Level", "1");
 			
 			if(!users.containsKey("XP"))
-				users.setInt("XP", 0);
+				users.getInt("XP", 0);
 			
 			if(!users.containsKey("XP_To_Level"))
-				users.setString("XP_To_Level", "0");
+				users.getString("XP_To_Level", "0");
 			
 			player.message("Welcome " + player.getName() + "!");
 			player.message("Your Current sJobs Stats are:");
